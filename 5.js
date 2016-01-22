@@ -17,6 +17,7 @@ var cars = [
 
 
 function CarStore(cars) {
+	var _this = this;
 	this.cars = cars;
 
 	this.addCar = function(type, price, year) {
@@ -49,7 +50,7 @@ function CarStore(cars) {
 		var index = 0
 		this.cars.forEach(function(car) {
 			if (car.type === type) {
-				cars.splice(index, 1);
+				_this.cars.splice(index, 1);
 			}
 			index++
    });
@@ -62,9 +63,6 @@ var carStore = new CarStore(cars);
 carStore.addCar('Smart', 18000, 2011);
 console.log(carStore.getSumPrice()); // 122000 
 // console.log(carStore.C); // 'Trabant'
-carStore.deleteCarByType('Ferrari');
-// console.log(carStore.getSumPrice()); // 82000 
-
-
 console.log(carStore.getOldestCarType());
-console.log(carStore.cars);
+carStore.deleteCarByType('Ferrari');
+console.log(carStore.getSumPrice()); // 82000 
