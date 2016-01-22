@@ -5,7 +5,6 @@
 
 
 function countLetters(string) {
-
 	var letterCountList = {};
 	var splitString = string.split('')
 	splitString.forEach(function(letter) {
