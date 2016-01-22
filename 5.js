@@ -55,7 +55,6 @@ function CarStore(cars) {
    });
   	return this.cars;
 	}
-
 }
 
 var carStore = new CarStore(cars);
