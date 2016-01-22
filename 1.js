@@ -1,9 +1,13 @@
 'use strict';
 
-// Write a function that takes an array of numbers,
-// and returns a new array with the same length but all,
-// of it's elements are the triple of the original array's elements!
-
+function tripleEachElement(array) {
+	var tripledList = [];
+	array.forEach(function(num) {
+    var tripledNum = num*3
+    tripledList.push(tripledNum);
+   });
+  return tripledList;
+}
 
 
 
